@@ -1,0 +1,7 @@
+{
+  "name": "mist-elements",
+  "short_name": "mist-elements",
+  "description": "Embeddable elements",
+  "start_url": "/",
+  "display": "standalone"
+}

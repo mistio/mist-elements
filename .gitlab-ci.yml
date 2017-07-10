@@ -1,0 +1,20 @@
+stages:
+  - build
+
+#################### BUILD STAGE ####################
+build_elements_image:
+  stage: build
+  variables:
+    GIT_SUBMODULE_STRATEGY: recursive
+  script:
+    - docker build --rm --build-arg build_tag=$CI_COMMIT_SHA -t gcr.io/mist-ops/elements:$CI_COMMIT_SHA .
+    - docker tag gcr.io/mist-ops/elements:$CI_COMMIT_SHA gcr.io/mist-ops/elements:$CI_COMMIT_REF_SLUG
+    - docker tag gcr.io/mist-ops/elements:$CI_COMMIT_SHA mist/elements:$CI_COMMIT_SHA
+    - docker tag gcr.io/mist-ops/elements:$CI_COMMIT_REF_SLUG mist/elements:$CI_COMMIT_REF_SLUG
+    - docker push gcr.io/mist-ops/elements:$CI_COMMIT_SHA
+    - docker push gcr.io/mist-ops/elements:$CI_COMMIT_REF_SLUG
+    - docker push mist/elements:$CI_COMMIT_SHA
+    - docker push mist/elements:$CI_COMMIT_REF_SLUG
+  tags:
+    - builder
+  dependencies: []

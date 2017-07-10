@@ -1,0 +1,31 @@
+{
+  "entrypoint": "index.html",
+  "fragments": ["bower_components/mist-insights/mist-insights.html"],
+  "sources": [
+   "src/**/*",
+   "bower.json"
+  ],
+  "extraDependencies": [
+    "manifest.json",
+    "bower_components/webcomponentsjs/webcomponents-loader.js",
+    "bower_components/mist-insights/echarts-import.html",
+    "bower_components/echarts/dist/echarts.min.js"
+  ],
+  "builds": [{
+    "name": "bundled",
+    "bundle": true,
+    "js": {"minify": true},
+    "css": {"minify": true},
+    "html": {"minify": true}
+  },{
+    "name": "unbundled",
+    "js": {"minify": true},
+    "css": {"minify": true},
+    "html": {"minify": true}
+  }],
+  "lint": {
+    "rules": [
+      "polymer-2"
+    ]
+  }
+}
