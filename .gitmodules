@@ -1,0 +1,3 @@
+[submodule "bower_components/mist-insights"]
+	path = bower_components/mist-insights
+	url = ../mist-insights
