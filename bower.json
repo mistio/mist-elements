@@ -4,7 +4,7 @@
   "main": "index.html",
   "dependencies": {
     "polymer": "Polymer/polymer#^2.0.0",
-    "mist-insights": "mistio/mist-insights#4588e908d902ec2ff1bb5e2b04b05bf22843cd96"
+    "mist-insights": "mistio/mist-insights#15d5dc5409ee19675a30ebc8d33f01483fc0d113"
   },
   "devDependencies": {
     "web-component-tester": "Polymer/web-component-tester#^6.0.0",
