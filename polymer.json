@@ -13,7 +13,10 @@
   ],
   "builds": [{
     "name": "bundled",
-    "bundle": true,
+    "bundle": {
+         "excludes": ["bower_components/echarts/dist/echarts.common.min.js"],
+         "sourcemaps": true
+     },
     "js": {"minify": true},
     "css": {"minify": true},
     "html": {"minify": true}

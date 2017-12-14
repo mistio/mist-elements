@@ -17,7 +17,7 @@ RUN bower install
 
 COPY . /elements
 
-RUN /usr/local/bin/polymer build
+RUN /usr/local/bin/polymer build && cp bower_components/echarts/dist/echarts.common.min.js build/bundled/bower_components/echarts/dist/echarts.common.min.js
 
 COPY ./container/nginx.conf /etc/nginx/nginx.conf
 
