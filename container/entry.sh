@@ -12,4 +12,4 @@ if ! git diff --quiet --exit-code master bower.json; then
     GIT_DIR= bower install --config.interactive=false --allow-root
 fi
 
-nginx
+exec nginx
